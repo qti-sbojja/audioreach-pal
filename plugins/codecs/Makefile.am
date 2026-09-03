@@ -12,7 +12,7 @@ bt_bundle_sources = \
 libbt_bundle_la_CPPFLAGS = -I $(top_srcdir)/plugins/codecs/inc
 libbt_bundle_la_SOURCES   = $(bt_bundle_sources)
 libbt_bundle_la_LIBADD    = @GLIB_LIBS@ -lexpat -ldl
-libbt_bundle_la_LDFLAGS = -shared -avoid-version
+libbt_bundle_la_LDFLAGS = -shared -version-number @LT_VERSION_NUMBER@
 libbt_bundle_la_CPPFLAGS += @GLIB_CFLAGS@ @SPF_CFLAGS@ -include glib.h
 libbt_bundle_la_CPPFLAGS += -DACD_SM_FILEPATH=\"/etc/models/acd/\"
 libbt_bundle_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__\)\) -DLINUX_ENABLED
@@ -36,7 +36,7 @@ bt_ble_sources = \
 libbt_ble_la_CPPFLAGS = -I $(top_srcdir)/plugins/codecs/inc
 libbt_ble_la_SOURCES   = $(bt_ble_sources)
 libbt_ble_la_LIBADD    = @GLIB_LIBS@ -lexpat -ldl
-libbt_ble_la_LDFLAGS = -shared -avoid-version
+libbt_ble_la_LDFLAGS = -shared -version-number @LT_VERSION_NUMBER@
 libbt_ble_la_CPPFLAGS += @GLIB_CFLAGS@ @SPF_CFLAGS@ -include glib.h
 libbt_ble_la_CPPFLAGS += -DACD_SM_FILEPATH=\"/etc/models/acd/\"
 libbt_ble_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__\)\) -DLINUX_ENABLED
@@ -60,7 +60,7 @@ bt_aptx_sources = \
 libbt_aptx_la_CPPFLAGS = -I $(top_srcdir)/plugins/codecs/inc
 libbt_aptx_la_SOURCES   = $(bt_aptx_sources)
 libbt_aptx_la_LIBADD    = @GLIB_LIBS@ -lexpat -ldl
-libbt_aptx_la_LDFLAGS = -shared -avoid-version
+libbt_aptx_la_LDFLAGS = -shared -version-number @LT_VERSION_NUMBER@
 libbt_aptx_la_CPPFLAGS += @GLIB_CFLAGS@ @SPF_CFLAGS@ -include glib.h
 libbt_aptx_la_CPPFLAGS += -DACD_SM_FILEPATH=\"/etc/models/acd/\"
 libbt_aptx_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__\)\) -DLINUX_ENABLED

@@ -48,7 +48,7 @@ libdev_headphone_la_LIBADD    = @GLIB_LIBS@ -lexpat -ltinyalsa -ltinycompress
 libdev_headphone_la_LIBADD   += -L${abs_top_builddir}/.libs -lpal
 libdev_headphone_la_CPPFLAGS := $(AM_CPPFLAGS)
 libdev_headphone_la_CPPFLAGS += -std=c++14
-libdev_headphone_la_LDFLAGS   = -shared -avoid-version
+libdev_headphone_la_LDFLAGS   = -shared -version-number @LT_VERSION_NUMBER@
 libdev_headphone_la_CPPFLAGS += @GLIB_CFLAGS@ -include glib.h
 
 libdev_headphone_la_CPPFLAGS += -DACD_SM_FILEPATH=\"/etc/models/acd/\"

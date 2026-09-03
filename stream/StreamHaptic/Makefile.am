@@ -48,7 +48,7 @@ libstream_haptics_la_LIBADD    += -L${abs_top_builddir}/stream/StreamPCM/.libs -
 libstream_haptics_la_LIBADD    += -L${abs_top_builddir}/.libs -lpal
 libstream_haptics_la_CPPFLAGS := $(AM_CPPFLAGS)
 libstream_haptics_la_CPPFLAGS += -std=c++14
-libstream_haptics_la_LDFLAGS   = -shared -avoid-version
+libstream_haptics_la_LDFLAGS   = -shared -version-number @LT_VERSION_NUMBER@
 libstream_haptics_la_CPPFLAGS += @GLIB_CFLAGS@ -include glib.h -DLINUX_ENABLED
 libstream_haptics_la_CPPFLAGS += -DACD_SM_FILEPATH=\"/etc/models/acd/\"
 libstream_haptics_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__\)\) -DLINUX_ENABLED

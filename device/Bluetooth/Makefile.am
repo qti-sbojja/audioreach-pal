@@ -52,7 +52,7 @@ libdev_bt_la_LIBADD   += -L${abs_top_builddir}/session/SessionAR/.libs -lsession
 libdev_bt_la_LIBADD   += -L${abs_top_builddir}/.libs -lpal
 libdev_bt_la_CPPFLAGS := $(AM_CPPFLAGS)
 libdev_bt_la_CPPFLAGS += -std=c++17
-libdev_bt_la_LDFLAGS   = -shared -avoid-version
+libdev_bt_la_LDFLAGS   = -shared -version-number @LT_VERSION_NUMBER@
 
 libdev_bt_la_CPPFLAGS += @GLIB_CFLAGS@ -include glib.h
 

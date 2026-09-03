@@ -26,7 +26,7 @@ libcustomva_intf_la_SOURCES   = $(customva_intf_sources)
 libcustomva_intf_la_LIBADD    = @GLIB_LIBS@ -llog -lcutils -lexpat
 libcustomva_intf_la_CPPFLAGS := $(AM_CPPFLAGS)
 libcustomva_intf_la_CPPFLAGS += -std=c++14
-libcustomva_intf_la_LDFLAGS   = -shared -avoid-version
+libcustomva_intf_la_LDFLAGS   = -shared -version-number @LT_VERSION_NUMBER@
 libcustomva_intf_la_CPPFLAGS += @GLIB_CFLAGS@ -include glib.h
 libcustomva_intf_la_CPPFLAGS += -DACD_SM_FILEPATH=\"/etc/models/acd/\"
 libcustomva_intf_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__\)\) -DLINUX_ENABLED

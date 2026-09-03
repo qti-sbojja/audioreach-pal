@@ -28,7 +28,7 @@ libsession_pcm_config_la_SOURCES   = $(session_pcm_config_sources)
 libsession_pcm_config_la_LIBADD    = @GLIB_LIBS@ -llog -lexpat -laudioroute -ltinyalsa
 libsession_pcm_config_la_CPPFLAGS := $(AM_CPPFLAGS)
 libsession_pcm_config_la_CPPFLAGS += -std=c++14
-libsession_pcm_config_la_LDFLAGS   = -shared -avoid-version
+libsession_pcm_config_la_LDFLAGS   = -shared -version-number @LT_VERSION_NUMBER@
 libsession_pcm_config_la_CPPFLAGS += @GLIB_CFLAGS@ -Dstrlcpy=g_strlcpy -Dstrlcat=g_strlcat -include glib.h
 libsession_pcm_config_la_CPPFLAGS += -DACD_SM_FILEPATH=\"/etc/models/acd/\"
 libsession_pcm_config_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__\)\) -DLINUX_ENABLED

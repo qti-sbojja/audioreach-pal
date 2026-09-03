@@ -47,7 +47,7 @@ libsession_agm_la_LIBADD    += -L${abs_top_builddir}/.libs -lpal
 libsession_agm_la_LIBADD    += -L${abs_top_builddir}/session/SessionAR/.libs -lsession_ar
 libsession_agm_la_CPPFLAGS := $(AM_CPPFLAGS)
 libsession_agm_la_CPPFLAGS += -std=c++14
-libsession_agm_la_LDFLAGS   = -shared -avoid-version
+libsession_agm_la_LDFLAGS   = -shared -version-number @LT_VERSION_NUMBER@
 libsession_agm_la_CPPFLAGS += @GLIB_CFLAGS@ -include glib.h
 libsession_agm_la_CPPFLAGS += -DACD_SM_FILEPATH=\"/etc/models/acd/\"
 libsession_agm_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__\)\)

@@ -54,7 +54,7 @@ libstream_ultrasound_la_LIBADD    += -L${abs_top_builddir}/session/SessionAR/.li
 libstream_ultrasound_la_LIBADD    += -L${abs_top_builddir}/session/SessionAlsaPcm/.libs -lsession_pcm
 libstream_ultrasound_la_CPPFLAGS := $(AM_CPPFLAGS)
 libstream_ultrasound_la_CPPFLAGS += -std=c++14
-libstream_ultrasound_la_LDFLAGS   = -shared -avoid-version
+libstream_ultrasound_la_LDFLAGS   = -shared -version-number @LT_VERSION_NUMBER@
 libstream_ultrasound_la_CPPFLAGS += @GLIB_CFLAGS@ -include glib.h -DLINUX_ENABLED
 libstream_ultrasound_la_CPPFLAGS += -DACD_SM_FILEPATH=\"/etc/models/acd/\"
 libstream_ultrasound_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__\)\) -DLINUX_ENABLED

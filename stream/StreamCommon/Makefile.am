@@ -47,7 +47,7 @@ libstream_common_la_LIBADD    = @GLIB_LIBS@ -lexpat -lar-gsl
 libstream_common_la_CPPFLAGS := $(AM_CPPFLAGS)
 libstream_common_la_CPPFLAGS += -std=c++14
 libstream_common_la_LIBADD    += -L${abs_top_builddir}/.libs -lpal
-libstream_common_la_LDFLAGS   = -shared -avoid-version
+libstream_common_la_LDFLAGS   = -shared -version-number @LT_VERSION_NUMBER@
 libstream_common_la_CPPFLAGS += @GLIB_CFLAGS@ -include glib.h
 libstream_common_la_CPPFLAGS += -DACD_SM_FILEPATH=\"/etc/models/acd/\"
 libstream_common_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__\)\) -DLINUX_ENABLED

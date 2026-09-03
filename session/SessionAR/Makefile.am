@@ -48,7 +48,7 @@ libsession_ar_la_LIBADD    = @GLIB_LIBS@ -lexpat -ltinyalsa -ltinycompress -lar-
 libsession_ar_la_LIBADD   += -L${abs_top_builddir}/.libs -lpal
 libsession_ar_la_CPPFLAGS := $(AM_CPPFLAGS)
 libsession_ar_la_CPPFLAGS += -std=c++14
-libsession_ar_la_LDFLAGS   = -shared -avoid-version
+libsession_ar_la_LDFLAGS   = -shared -version-number @LT_VERSION_NUMBER@
 libsession_ar_la_CPPFLAGS += @GLIB_CFLAGS@ -include glib.h
 libsession_ar_la_CPPFLAGS += -DACD_SM_FILEPATH=\"/etc/models/acd/\"
 libsession_ar_la_CPPFLAGS += -D__unused=__attribute__\(\(__unused__\)\) -DLINUX_ENABLED

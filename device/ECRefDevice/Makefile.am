@@ -49,7 +49,7 @@ libdev_ec_ref_la_LIBADD    += -L${abs_top_builddir}/session/SessionAR/.libs -lse
 libdev_ec_ref_la_LIBADD   += -L${abs_top_builddir}/.libs -lpal
 libdev_ec_ref_la_CPPFLAGS := $(AM_CPPFLAGS)
 libdev_ec_ref_la_CPPFLAGS += -std=c++14
-libdev_ec_ref_la_LDFLAGS   = -shared -avoid-version
+libdev_ec_ref_la_LDFLAGS   = -shared -version-number @LT_VERSION_NUMBER@
 
 libdev_ec_ref_la_CPPFLAGS += @GLIB_CFLAGS@ -include glib.h
 
